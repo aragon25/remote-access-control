@@ -1,0 +1,3 @@
+#!/bin/bash
+#echo "postinst $1 $2 $3"
+exit 0
