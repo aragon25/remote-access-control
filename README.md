@@ -75,24 +75,11 @@ Options (examples):
 - `-v, --version` — print version
 - `-h, --help` — show help
 
-Examples:
-
-```bash
-# Enable SSH and start service
-sudo remote-access-control.sh --enable_ssh
-
-# Switch to NetworkManager (will try to convert wpa_supplicant.conf)
-sudo remote-access-control.sh --use_networkmanager
-
-# Disable RealVNC server
-sudo remote-access-control.sh --disable_vnc
-```
-
 ---
 
 ## 📁 Files of interest
 
-- `remote-access-control.sh` — main script with all control commands.
+- `src/remote-access-control.sh` — main script with all control commands.
 - `deploy/build_deb.sh`, `deploy/build_test_deb.sh` — packaging helpers to create `.deb` artifacts placed into `packages/`.
 - `deploy/config/*.sh` — packaging hooks executed by the package (review before installing).
 
@@ -111,7 +98,12 @@ sudo remote-access-control.sh --disable_vnc
 Enable SSH and RealVNC, then reboot to apply changes if needed:
 
 ```bash
-sudo remote-access-control.sh --enable_ssh
-sudo remote-access-control.sh --enable_vnc
-sudo reboot
+# Enable SSH and start service
+sudo remote-access-control --enable_ssh
+
+# Switch to NetworkManager (will try to convert wpa_supplicant.conf)
+sudo remote-access-control --use_networkmanager
+
+# Disable RealVNC server
+sudo remote-access-control --disable_vnc
 ```
