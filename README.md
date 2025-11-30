@@ -35,8 +35,8 @@ The script checks these packages before attempting actions and prints instructio
 Build or download the release package and install on the device:
 
 ```bash
-wget https://github.com/aragon25/remote-access-control/releases/download/v1.3-2/remote-access-control_1.3-2_all.deb
-sudo apt install ./remote-access-control_1.3-2_all.deb
+wget https://github.com/aragon25/remote-access-control/releases/download/v1.4-1/remote-access-control_1.4-1_all.deb
+sudo apt install ./remote-access-control_1.4-1_all.deb
 ```
 
 The package places the helper script and any packaging-provided files into system locations; inspect `deploy/config/build_deb.conf` for details.
